@@ -1,0 +1,19 @@
+[toolchain]
+package_manager = "pnpm"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+escrow_program = "6ih8oekeSo9ohzMEk5r4vrCKZZqufNS5KSDRJqZpz7ST"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "pnpm tsx --test --tsconfig ./tsconfig.json tests/**/*.ts"
